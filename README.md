@@ -1,7 +1,8 @@
 ptrto
 =====
 
-[![Build Status](https://img.shields.io/travis/Rican7/incoming.svg?style=flat)](https://travis-ci.org/Rican7/incoming)
+[![Build Status](https://img.shields.io/travis/mcos/ptrto.svg?style=flat)](https://travis-ci.org/mcos/ptrto)
+[![GoDoc](https://godoc.org/github.com/mcos/ptrto?status.svg)](https://godoc.org/github.com/mcos/ptrto)
 
 `ptrto` is a tiny library that exposes functions that return pointers to the `Go` builtin types (http://golang.org/pkg/builtin).
 
