@@ -24,6 +24,11 @@ const (
 	testUintptr uintptr = 1
 )
 
+// Some types cannot be `const`
+var (
+	testStruct struct{}
+)
+
 func TestBool(t *testing.T) {
 	ptr := Bool(testBool)
 
@@ -101,6 +106,14 @@ func TestString(t *testing.T) {
 
 	if reflect.Ptr != reflect.TypeOf(ptr).Kind() {
 		t.Errorf("Cannot return pointer to string type")
+	}
+}
+
+func TestStruct(t *testing.T) {
+	ptr := Struct(testStruct)
+
+	if reflect.Ptr != reflect.TypeOf(ptr).Kind() {
+		t.Errorf("Cannot return pointer to struct type")
 	}
 }
 

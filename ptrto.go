@@ -52,6 +52,11 @@ func String(s string) *string {
 	return &s
 }
 
+// Struct returns a pointer to a struct type
+func Struct(s struct{}) *struct{} {
+	return &s
+}
+
 // Uint returns a pointer to a uint type
 func Uint(u uint) *uint {
 	return &u

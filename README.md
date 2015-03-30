@@ -17,6 +17,7 @@ The following types are supported:
 * `int32`
 * `int64`
 * `string`
+* `struct`
 * `uint`
 * `uint8`
 * `uint16`
