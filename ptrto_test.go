@@ -26,7 +26,8 @@ const (
 
 // Some types cannot be `const`
 var (
-	testStruct struct{}
+	testInterface interface{}
+	testStruct    struct{}
 )
 
 func TestBool(t *testing.T) {
@@ -98,6 +99,14 @@ func TestInt64(t *testing.T) {
 
 	if reflect.Ptr != reflect.TypeOf(ptr).Kind() {
 		t.Errorf("Cannot return pointer to int64 type")
+	}
+}
+
+func TestInterface(t *testing.T) {
+	ptr := Interface(testInterface)
+
+	if reflect.Ptr != reflect.TypeOf(ptr).Kind() {
+		t.Errorf("Cannot return pointer to interface type")
 	}
 }
 

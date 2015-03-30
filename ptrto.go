@@ -47,6 +47,11 @@ func Int64(i int64) *int64 {
 	return &i
 }
 
+// Interface returns a pointer to an interface type
+func Interface(v interface{}) *interface{} {
+	return &v
+}
+
 // String returns a pointer to a string type
 func String(s string) *string {
 	return &s
